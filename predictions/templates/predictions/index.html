@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Taylorflow</title>
+  <link rel="stylesheet" href= "{% static 'predictions/css/bootstrap.css' %}" />
+</head>
+
+<body>
+<!--
+  <div style=" margin: 0px !important ;" class="alert alert-dismissible alert-warning">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h2 class="alert-heading">Taylorflow! Lyrics generator</h2>
+  <p class="lead">This is a machine learning text generator based on a model trained for x epochs with 120 songs.</p>
+  <form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit"  class="btn btn-success"> Generate! </button>
+  </form>
+</div> -->
+
+  <div  class="jumbotron">
+  <h2 >Taylorflow! Lyrics generator</h2>
+  <p class="lead">This is a machine learning text generator based on a model trained for x epochs with 120 songs.</p>
+  <hr class="my-4">
+  <p>It uses Keras and Tensroflow.</p>
+  <p class="lead">
+    <form method="POST">
+      {% csrf_token %}
+      {{form}}
+    <button type="submit" class="btn btn-success" >Generate!</button>
+  </form>
+  </p>
+</div>
+
+  <div style="margin: 25px !important ;" class="jumbotron">
+  Generated Lyrics:
+  <p>{{text|linebreaks}}</p>
+  </div>
+
+</body>
+</html>
+
+<script>
+
+
+</script>
