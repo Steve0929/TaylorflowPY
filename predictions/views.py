@@ -15,7 +15,7 @@ from numpy.random import seed
 seed(1)
 path= module_dir = os.path.dirname(__file__)
 global fullText, model, graph
-fullText = open(path +'\\static\\predictions\\model\\120TaylorSongsLyrics.txt',encoding='utf8').read().lower()
+fullText = open(path +'/static/120TaylorSongsLyrics.txt',encoding='utf8').read().lower()
 chars = sorted(list(set(fullText)))
 char_indices = dict((char, chars.index(char)) for char in chars)
 
