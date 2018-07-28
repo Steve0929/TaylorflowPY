@@ -19,7 +19,7 @@ fullText = open(path +'/static/120TaylorSongsLyrics.txt',encoding='utf8').read()
 chars = sorted(list(set(fullText)))
 char_indices = dict((char, chars.index(char)) for char in chars)
 
-model = load_model(path+'\\static\\predictions\\model\\my_model.h5')
+model = load_model(path+'/static/my_model.h5')
 graph = tf.get_default_graph()
 
 maxlen = 20
